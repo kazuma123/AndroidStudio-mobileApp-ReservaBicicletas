@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/common_google_signin_btn_text_dark_default"
+tools:context=".Actividades.ReserveBicycle">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="335dp"
+                android:layout_height="143dp"
+                android:layout_marginBottom="30dp"
+                app:srcCompat="@drawable/bikerenta"
+                android:contentDescription="TODO" />
+
+
+            <Button
+                android:id="@+id/btn_elegir_fecha_reserva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/botones_redondos"
+                android:text="Elegir Fecha de Reserva"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/view_fecha_inicial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:ems="10"
+                android:hint="Fecha Inicial"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textColor="#E91E63"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+            <EditText
+                android:id="@+id/view_inicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="5dp"
+                android:textSize="20sp"
+                tools:targetApi="lollipop" />/>
+
+            <TextView
+                android:id="@+id/view_fecha_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:ems="10"
+                android:hint="Fecha Final"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:textColor="#E91E63"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:targetApi="lollipop" />
+
+            <EditText
+                android:id="@+id/view_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textSize="20sp"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/btn_realizar_reserva"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/botones_redondos"
+                android:text="Realizar Reserva"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

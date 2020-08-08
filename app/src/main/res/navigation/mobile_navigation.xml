@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.proyecto_reservadebicicletas.Fragments.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.proyecto_reservadebicicletas.Fragments.terminal.TerminalesFavoritosFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_terminal" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.proyecto_reservadebicicletas.Fragments.eliminar.EliminarFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_eliminar" />
+
+    <fragment
+        android:id="@+id/nav_modificar_datos"
+        android:name="com.example.proyecto_reservadebicicletas.Usuario.ModificarFragment"
+        android:label="@string/modificar_datos"
+        tools:layout="@layout/fragment_modificar" />
+
+
+</navigation>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_dark_default"
+    tools:context=".Usuario.ModificarDatosUsuario">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10px"
+                android:gravity="center"
+                android:text="Modificar Datos"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="186dp"
+                app:srcCompat="@drawable/imagen_base"
+                android:contentDescription="TODO" />
+
+            <Button
+                android:id="@+id/btn_sel_imagen"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#F44336"
+                android:onClick="Onclick"
+                android:text="Seleccionar Imagen"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/icon_email"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/icon_lock"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+            <EditText
+                android:id="@+id/edtPassword_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:drawableLeft="@drawable/icon_lock"
+                android:ems="10"
+                android:hint="New Password"
+                android:inputType="textPassword"
+                android:paddingLeft="5dp"
+                android:textSize="18sp"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/btn_guardar_cambios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/botones_redondos"
+                android:onClick="Onclick2"
+                android:text="Guardar"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

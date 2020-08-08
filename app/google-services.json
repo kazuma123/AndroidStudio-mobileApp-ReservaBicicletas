@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "781835143994",
+    "firebase_url": "https://reservabicicleta.firebaseio.com",
+    "project_id": "reservabicicleta",
+    "storage_bucket": "reservabicicleta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:781835143994:android:d5412cf397e6cb1277de03",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_reservadebicicletas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "781835143994-edrtr7cbtfku3pd427oqd6su7hc9ukkm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto_reservadebicicletas",
+            "certificate_hash": "a907549063c8b5868ed9cbd3b33dae7041a9344a"
+          }
+        },
+        {
+          "client_id": "781835143994-4ntokjuq2cmofup6chtu7kev7v1027nl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.proyecto_reservadebicicletas",
+            "certificate_hash": "18e4f08766cc0ce51eafed13329f8fc3a37361c9"
+          }
+        },
+        {
+          "client_id": "781835143994-7q4g0gm3a88dql18i26na1cvuci57v66.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9PCSXK4txfYjGEHNZ5ZW8MolDTiUKKWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "781835143994-7q4g0gm3a88dql18i26na1cvuci57v66.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

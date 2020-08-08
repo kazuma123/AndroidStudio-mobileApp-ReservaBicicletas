@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Actividades.Calendario"
+    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="661dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="ELIGA SU FECHA DE RESERVA DE BICICLETA"
+            android:textAlignment="center"
+            android:textColor="#E91E63"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="686dp"
+            android:layout_height="256dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="248dp"
+                android:layout_height="match_parent"
+                android:background="#00BCD4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha Inicial"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CalendarView
+                    android:id="@+id/calendarInicial"
+                    android:layout_width="256dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="258dp"
+                android:layout_height="match_parent"
+                android:background="#FF5722"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fecha Final"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CalendarView
+                    android:id="@+id/calendarFinal"
+                    android:layout_width="262dp"
+                    android:layout_height="229dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_reservar_bicicleta"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/botones_redondos"
+                android:gravity="center"
+                android:text="Reservar"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
