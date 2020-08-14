@@ -12,12 +12,14 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proyecto_reservadebicicletas.Actividades.CancelarReserva;
 
 import com.example.proyecto_reservadebicicletas.MenuActivity;
 import com.example.proyecto_reservadebicicletas.R;
+import com.example.proyecto_reservadebicicletas.RecuperarCuenta;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -31,6 +33,7 @@ import com.google.firebase.database.ValueEventListener;
 public class LoginUsuario extends AppCompatActivity {
     private EditText txt_email;
     private EditText txt_password;
+    private TextView recuperarCuenta;
     private String email;
     private String password;
     private ProgressDialog progressDialog;
@@ -45,11 +48,20 @@ public class LoginUsuario extends AppCompatActivity {
 
         txt_email = findViewById(R.id.edtUsuario);
         txt_password = findViewById(R.id.edtPassword);
+        recuperarCuenta = findViewById(R.id.btn_txt_count);
         Button button = findViewById(R.id.btnLogin);
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         firebaseAuth = FirebaseAuth.getInstance();
+
+        recuperarCuenta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recuperarCuenta = new Intent(LoginUsuario.this, RecuperarCuenta.class);
+                startActivity(recuperarCuenta);
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,9 +72,6 @@ public class LoginUsuario extends AppCompatActivity {
                 password = txt_password.getText().toString();
 
                 if(!email.isEmpty() && !password.isEmpty()){
-                    progressDialog = new ProgressDialog(LoginUsuario.this);
-                    progressDialog.setTitle("Uploading...");
-                    progressDialog.show();
                     Login();
 
                 }
@@ -88,7 +97,7 @@ public class LoginUsuario extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
                     if(firebaseAuth.getCurrentUser().isEmailVerified()){
-                        progressDialog.dismiss();
+
                         databaseReference.child("Users").addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -127,7 +136,7 @@ public class LoginUsuario extends AppCompatActivity {
                     }
                 }else{
                     Toast.makeText(LoginUsuario.this,"Usted no esta registrado",Toast.LENGTH_SHORT).show();
-                    progressDialog.dismiss();
+
                 }
             }
         });

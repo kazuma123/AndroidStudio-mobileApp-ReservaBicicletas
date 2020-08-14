@@ -65,6 +65,7 @@ public class CancelarReserva extends AppCompatActivity {
                                             map.put("reserva", "0");
                                             databaseReference.child("Users").child(id).child("reserva").updateChildren(map);
                                             startActivity(new Intent(CancelarReserva.this, MenuActivity.class));
+                                            finish();
                                         }
                                     });
                                     builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -86,6 +87,7 @@ public class CancelarReserva extends AppCompatActivity {
 
                     }
                 });
+
             }
         });
 
@@ -104,7 +106,8 @@ public class CancelarReserva extends AppCompatActivity {
             corer = false;
         }
     }
-    @Override public void onBackPressed() {
+    @Override
+    public void onBackPressed() {
         new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Exit") .setMessage("Are you sure you want to exit?")
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

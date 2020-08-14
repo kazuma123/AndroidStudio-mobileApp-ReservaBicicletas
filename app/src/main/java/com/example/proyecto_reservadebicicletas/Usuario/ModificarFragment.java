@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proyecto_reservadebicicletas.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,6 +37,7 @@ public class ModificarFragment extends Fragment {
     private EditText view_password;
     private EditText view_phone;
     private String email_obtenido;
+    private FirebaseAuth firebaseAuth;
     private String id;
     private String dni;
     private String user;
@@ -55,11 +57,11 @@ public class ModificarFragment extends Fragment {
         view_email = view.findViewById(R.id.view_email);
         view_password = view.findViewById(R.id.view_password);
         view_phone = view.findViewById(R.id.view_telefono);
-
+        firebaseAuth = FirebaseAuth.getInstance();
         Button actualize = view.findViewById(R.id.btn_actualizar);
         Button cargarDatos = view.findViewById(R.id.btn_cargarDatos);
         habilitar();
-
+        firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance().getReference();
 
         cargarDatos.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +71,7 @@ public class ModificarFragment extends Fragment {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                             if (dataSnapshot.exists()){
+
                                 email_obtenido = getFromSharesPreferences();
                                 for (DataSnapshot ds: dataSnapshot.getChildren()){
                                     if(ds.child("e-mail").getValue().toString().equals(email_obtenido)){
